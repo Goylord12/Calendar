@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="298.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calendar.WindowDate">
+   <children>
+      <Button fx:id="ButtonMonth1" alignment="CENTER" layoutX="14.0" layoutY="228.0" mnemonicParsing="false" onAction="#ClickButtonMonth1" prefHeight="44.0" prefWidth="138.0" style="-fx-background-color: 0000;" text="Май">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonYear1" layoutX="193.0" layoutY="228.0" mnemonicParsing="false" onAction="#ClickButtonYear1" prefHeight="44.0" prefWidth="85.0" style="-fx-background-color: 0000;" text="2023">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="106.0" layoutY="14.0" text="Календарь">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="ButtonYear2" layoutX="197.0" layoutY="184.0" mnemonicParsing="false" onAction="#ClickButtonYear2" prefHeight="44.0" prefWidth="77.0" style="-fx-background-color: 0000;" text="2022">
+         <font>
+            <Font name="Calibri" size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonYear3" layoutX="197.0" layoutY="140.0" mnemonicParsing="false" onAction="#ClickButtonYear3" prefHeight="44.0" prefWidth="77.0" style="-fx-background-color: 0000;" text="2021">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonYear4" layoutX="197.0" layoutY="96.0" mnemonicParsing="false" onAction="#ClickButtonYear4" prefHeight="44.0" prefWidth="77.0" style="-fx-background-color: 0000;" text="2020">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonYear5" layoutX="197.0" layoutY="272.0" mnemonicParsing="false" onAction="#ClickButtonYear5" prefHeight="44.0" prefWidth="77.0" style="-fx-background-color: 0000;" text="2024">
+         <font>
+            <Font name="Calibri" size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonYear6" layoutX="197.0" layoutY="316.0" mnemonicParsing="false" onAction="#ClickButtonYear6" prefHeight="44.0" prefWidth="77.0" style="-fx-background-color: 0000;" text="2025">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonYear7" layoutX="197.0" layoutY="360.0" mnemonicParsing="false" onAction="#ClickButtonYear7" prefHeight="44.0" prefWidth="77.0" style="-fx-background-color: 0000;" text="2026">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonMonth2" alignment="CENTER" layoutX="14.0" layoutY="184.0" mnemonicParsing="false" onAction="#ClickButtonMonth2" prefHeight="44.0" prefWidth="138.0" style="-fx-background-color: 0000;" text="Апрель">
+         <font>
+            <Font name="Calibri" size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonMonth3" alignment="CENTER" layoutX="14.0" layoutY="140.0" mnemonicParsing="false" onAction="#ClickButtonMonth3" prefHeight="44.0" prefWidth="138.0" style="-fx-background-color: 0000;" text="Март">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonMonth4" alignment="CENTER" layoutX="14.0" layoutY="96.0" mnemonicParsing="false" onAction="#ClickButtonMonth4" prefHeight="44.0" prefWidth="138.0" style="-fx-background-color: 0000;" text="Февраль">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonMonth5" alignment="CENTER" layoutX="14.0" layoutY="272.0" mnemonicParsing="false" onAction="#ClickButtonMonth5" prefHeight="44.0" prefWidth="138.0" style="-fx-background-color: 0000;" text="Июнь">
+         <font>
+            <Font name="Calibri" size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonMonth6" alignment="CENTER" layoutX="14.0" layoutY="316.0" mnemonicParsing="false" onAction="#ClickButtonMonth6" prefHeight="44.0" prefWidth="138.0" style="-fx-background-color: 0000;" text="Июль">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonMonth7" alignment="CENTER" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#ClickButtonMonth7" prefHeight="44.0" prefWidth="138.0" style="-fx-background-color: 0000;" text="Август">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonDone" alignment="CENTER" layoutX="83.0" layoutY="404.0" mnemonicParsing="false" onAction="#ClickButtonDone" prefHeight="44.0" prefWidth="138.0" style="-fx-background-color: 0000;" text="Готово">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

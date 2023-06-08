@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="872.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calendar.HelloController">
+   <children>
+      <Button fx:id="Month" alignment="TOP_LEFT" layoutX="120.0" layoutY="103.0" mnemonicParsing="false" onAction="#ClickButtonMonth" prefHeight="44.0" prefWidth="138.0" style="-fx-background-color: 0000;" text="Май">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="Year" layoutX="338.0" layoutY="103.0" mnemonicParsing="false" onAction="#ClickButtonYear" prefHeight="44.0" prefWidth="98.0" style="-fx-background-color: 0000;" text="2023">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+      </Button>
+      <TableView fx:id="Calendar" layoutX="14.0" layoutY="150.0" prefHeight="266.0" prefWidth="523.0" style="-fx-background-color: 0000; -fx-selection-bar: rgb(100,100,100);">
+        <columns>
+          <TableColumn fx:id="Monday" editable="false" prefWidth="75.0" sortable="false" style="-fx-background-color: rgb(244,244,244); -fx-border-color: rgb(244,244,244)rgb(244,244,244); -fx-font-size: 18; -fx-alignment: CENTER; -fx-font-family: Georgia;" text="Пн." />
+            <TableColumn fx:id="Tuesday" editable="false" prefWidth="75.0" sortable="false" style="-fx-background-color: rgb(244,244,244); -fx-border-color: rgb(244,244,244)rgb(244,244,244); -fx-font-size: 18; -fx-alignment: CENTER; -fx-font-family: Georgia;" text="Вт." />
+            <TableColumn fx:id="Wednesday" editable="false" prefWidth="75.0" resizable="false" sortable="false" style="-fx-background-color: rgb(244,244,244); -fx-border-color: rgb(244,244,244)rgb(244,244,244); -fx-font-size: 18; -fx-alignment: CENTER; -fx-font-family: Georgia;" text="Ср." />
+            <TableColumn fx:id="Thursday" editable="false" prefWidth="75.0" resizable="false" sortable="false" style="-fx-background-color: rgb(244,244,244); -fx-border-color: rgb(244,244,244)rgb(244,244,244); -fx-font-size: 18; -fx-alignment: CENTER; -fx-font-family: Georgia;" text="Чт." />
+            <TableColumn fx:id="Friday" editable="false" prefWidth="75.0" resizable="false" sortable="false" style="-fx-background-color: rgb(244,244,244); -fx-border-color: rgb(244,244,244)rgb(244,244,244); -fx-font-size: 18; -fx-alignment: CENTER; -fx-font-family: Georgia;" text="Пт." />
+            <TableColumn fx:id="Saturday" editable="false" prefWidth="75.0" resizable="false" sortable="false" style="-fx-background-color: rgb(244,244,244); -fx-border-color: rgb(244,244,244)rgb(244,244,244); -fx-font-size: 18; -fx-alignment: CENTER; -fx-font-family: Georgia;" text="Сб." />
+            <TableColumn fx:id="Sunday" editable="false" prefWidth="75.0" resizable="false" sortable="false" style="-fx-background-color: rgb(244,244,244); -fx-border-color: rgb(244,244,244)rgb(244,244,244); -fx-font-size: 18; -fx-alignment: CENTER; -fx-font-family: Georgia;" text="Вс." />
+        </columns>
+      </TableView>
+      <Label layoutX="233.0" layoutY="14.0" text="Календарь">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="Event" layoutX="560.0" prefHeight="500.0" prefWidth="312.0" style="-fx-background-color: rgb(255,255,255);">
+         <columns>
+            <TableColumn minWidth="0.0" prefWidth="62.0" style="-fx-background-color: rgb(255,255,255); -fx-border-color: rgb(255,255,255) rgb(255,255,255);" text="Время" />
+            <TableColumn prefWidth="249.0" style="-fx-background-color: rgb(255,255,255); -fx-border-color: rgb(255,255,255) rgb(255,255,255);" text="Событие" />
+         </columns>
+      </TableView>
+   </children>
+</Pane>
