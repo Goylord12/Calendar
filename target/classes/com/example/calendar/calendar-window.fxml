@@ -21,8 +21,8 @@
       </Button>
       <TableView fx:id="Calendar" layoutX="14.0" layoutY="150.0" prefHeight="266.0" prefWidth="523.0" style="-fx-background-color: 0000; -fx-selection-bar: rgb(100,100,100);">
         <columns>
-          <TableColumn fx:id="Monday" editable="false" prefWidth="75.0" sortable="false" style="-fx-background-color: rgb(244,244,244); -fx-border-color: rgb(244,244,244)rgb(244,244,244); -fx-font-size: 18; -fx-alignment: CENTER; -fx-font-family: Georgia;" text="Пн." />
-            <TableColumn fx:id="Tuesday" editable="false" prefWidth="75.0" sortable="false" style="-fx-background-color: rgb(244,244,244); -fx-border-color: rgb(244,244,244)rgb(244,244,244); -fx-font-size: 18; -fx-alignment: CENTER; -fx-font-family: Georgia;" text="Вт." />
+          <TableColumn fx:id="Monday" editable="false" prefWidth="75.0" reorderable="false" resizable="false" sortable="false" style="-fx-background-color: rgb(244,244,244); -fx-border-color: rgb(244,244,244)rgb(244,244,244); -fx-font-size: 18; -fx-alignment: CENTER; -fx-font-family: Georgia;" text="Пн." />
+            <TableColumn fx:id="Tuesday" editable="false" prefWidth="75.0" resizable="false" sortable="false" style="-fx-background-color: rgb(244,244,244); -fx-border-color: rgb(244,244,244)rgb(244,244,244); -fx-font-size: 18; -fx-alignment: CENTER; -fx-font-family: Georgia;" text="Вт." />
             <TableColumn fx:id="Wednesday" editable="false" prefWidth="75.0" resizable="false" sortable="false" style="-fx-background-color: rgb(244,244,244); -fx-border-color: rgb(244,244,244)rgb(244,244,244); -fx-font-size: 18; -fx-alignment: CENTER; -fx-font-family: Georgia;" text="Ср." />
             <TableColumn fx:id="Thursday" editable="false" prefWidth="75.0" resizable="false" sortable="false" style="-fx-background-color: rgb(244,244,244); -fx-border-color: rgb(244,244,244)rgb(244,244,244); -fx-font-size: 18; -fx-alignment: CENTER; -fx-font-family: Georgia;" text="Чт." />
             <TableColumn fx:id="Friday" editable="false" prefWidth="75.0" resizable="false" sortable="false" style="-fx-background-color: rgb(244,244,244); -fx-border-color: rgb(244,244,244)rgb(244,244,244); -fx-font-size: 18; -fx-alignment: CENTER; -fx-font-family: Georgia;" text="Пт." />
@@ -37,9 +37,24 @@
       </Label>
       <TableView fx:id="Event" layoutX="560.0" prefHeight="500.0" prefWidth="312.0" style="-fx-background-color: rgb(255,255,255);">
          <columns>
-            <TableColumn minWidth="0.0" prefWidth="62.0" style="-fx-background-color: rgb(255,255,255); -fx-border-color: rgb(255,255,255) rgb(255,255,255);" text="Время" />
-            <TableColumn prefWidth="249.0" style="-fx-background-color: rgb(255,255,255); -fx-border-color: rgb(255,255,255) rgb(255,255,255);" text="Событие" />
+            <TableColumn fx:id="TimeColumn" minWidth="0.0" prefWidth="62.0" style="-fx-background-color: rgb(255,255,255); -fx-border-color: rgb(255,255,255) rgb(255,255,255);" text="Время" />
+            <TableColumn fx:id="EventColumn" prefWidth="249.0" style="-fx-background-color: rgb(255,255,255); -fx-border-color: rgb(255,255,255) rgb(255,255,255);" text="Событие" />
          </columns>
       </TableView>
+      <Button fx:id="Month1" alignment="TOP_LEFT" layoutX="26.0" layoutY="435.0" mnemonicParsing="false" onAction="#ClickButtonMonth" prefHeight="44.0" prefWidth="138.0" style="-fx-background-color: 0000;" text="Добавить">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="Month11" alignment="TOP_LEFT" layoutX="189.0" layoutY="435.0" mnemonicParsing="false" onAction="#ClickButtonMonth" prefHeight="44.0" prefWidth="191.0" style="-fx-background-color: 0000;" text="Редактировать">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="Month111" alignment="TOP_LEFT" layoutX="407.0" layoutY="435.0" mnemonicParsing="false" onAction="#ClickButtonMonth" prefHeight="44.0" prefWidth="138.0" style="-fx-background-color: 0000;" text="Удалить">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+      </Button>
    </children>
 </Pane>
