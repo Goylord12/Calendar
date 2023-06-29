@@ -19,11 +19,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TablePosition;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import static java.util.Calendar.DAY_OF_WEEK;
+import static javax.swing.JOptionPane.*;
 
 public class HelloController {
 
@@ -36,13 +38,21 @@ public class HelloController {
     public Integer lastDaysMonth;
     public float mon;
     private ObservableList<Calendar> calendarData = FXCollections.observableArrayList();
+    private ObservableList<Event> eventData = FXCollections.observableArrayList();
     public int dayOfWeek;
 
     @FXML
     private TableView<Calendar> Calendar;
 
     @FXML
-    private TableView<?> Event;
+    private TableView<Event> Event;
+
+    @FXML
+    private TableColumn<Event, String> EventColumn;
+
+    @FXML
+    private TableColumn<Event, String> TimeColumn;
+
 
     @FXML
     private TableColumn<Calendar, String> Friday;
@@ -91,6 +101,8 @@ public class HelloController {
 
     @FXML
     void ClickButtonYear(ActionEvent event) {
+
+//        JOptionPane.showMessageDialog(null, Calendar.getSelectionModel().getSelectedItem().getMonday());
         Year.getScene().getWindow().hide();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("calendar-date.fxml"));
@@ -108,8 +120,11 @@ public class HelloController {
     private void initialize() {
 
         Calendar.getSelectionModel().setCellSelectionEnabled(true);
+        Calendar.setEditable(false);
+//        Calendar.set;
+
         calendar.set(Integer.valueOf(year.format(dateNow)) , Integer.valueOf(month.format(dateNow)) - 1 , 1);
-        JOptionPane.showMessageDialog(null, calendar.getFirstDayOfWeek());
+//        showMessageDialog(null, calendar.getFirstDayOfWeek());
         dayOfWeek = calendar.get(DAY_OF_WEEK);
         if(dateChanged){
             Month.setText(NameMonth(month.format(dateNow)));
@@ -130,15 +145,22 @@ public class HelloController {
         Saturday.setCellValueFactory(new PropertyValueFactory<Calendar, String>("saturday"));
         Sunday.setCellValueFactory(new PropertyValueFactory<Calendar, String>("sunday"));
 
+        TimeColumn.setCellValueFactory(new PropertyValueFactory<Event, String>("time"));
+        EventColumn.setCellValueFactory(new PropertyValueFactory<Event, String>("event"));
+
         // заполняем таблицу данными
         Calendar.setItems(calendarData);
+        Event.setItems(eventData);
     }
 
     private void initData() {
 
-
+        CalendarDataBase calendarDataBase = new CalendarDataBase();
+        java.sql.Date date = new java.sql.Date(2023-11-11);
+        com.example.calendar.Event event = new Event(date,"sdf", "sdf");
+        calendarDataBase.setEvent(event);
         int c = 1;
-        JOptionPane.showMessageDialog(null, String.valueOf(dayOfWeek));
+//        JOptionPane.showMessageDialog(null, String.valueOf(dayOfWeek));
         List<String> nums = new ArrayList<>();
         if(dayOfWeek == 1) dayOfWeek = 8;
         for(int i = (lastDaysMonth + 1) - (dayOfWeek - 2); i <= lastDaysMonth + 1; i++){
